@@ -50,7 +50,7 @@ void PushData(RingBuffer* rb, char val)
     rb->ActiveElement++;
 }
 
-// سحب عنصر من البفر
+// سحب عنصر من Buffer
 char PopData(RingBuffer* rb) 
 {
 
@@ -74,7 +74,7 @@ int main()
 
     RingBuffer MyRing;
 
-    // تهيئة البفر قبل الاستخدام
+    // تهيئة Buffer قبل الاستخدام
     PrepareBuffer(&MyRing);
 
     char InputText[64];
