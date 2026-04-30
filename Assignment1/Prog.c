@@ -4,7 +4,8 @@
 #define MAX_CAPACITY 10   // أقصى عدد عناصر ممكن نخزنها
 
 // بنية ال Buffer
-typedef struct {
+typedef struct
+{
     char ArrData[MAX_CAPACITY]; 
     int WritePos;               
     int ReadPos;               
@@ -13,7 +14,8 @@ typedef struct {
 
 
 //تهيئة لل Buffer
-void PrepareBuffer(RingBuffer* rb) {
+void PrepareBuffer(RingBuffer* rb)
+{
     rb->WritePos = 0;     
     rb->ReadPos = 0;
     rb->ActiveElement = 0; 
@@ -49,7 +51,8 @@ void PushData(RingBuffer* rb, char val)
 }
 
 // سحب عنصر من البفر
-char PopData(RingBuffer* rb) {
+char PopData(RingBuffer* rb) 
+{
 
     if (BufferEmpty(rb))
     {
